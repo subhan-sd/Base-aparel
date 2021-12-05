@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	/* font: inherit; */
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Css Reset */
+
+
+body{
+    background-color: #fafafa;
+    background-image: url(images/bg-pattern-desktop.svg);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 0.7fr;
+    grid-template-rows: 0.2fr 1fr;
+    grid-template-areas: "brand jumbo"
+                         "content jumbo";
+}
+
+.brand{
+    grid-area: brand;
+    width: 60%;
+    margin: auto;
+    margin-top: 60px;
+}
+
+.jumbo{
+    /* width: 100%;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(images/hero-desktop.jpg); */
+    grid-area: jumbo;
+    max-width: 100%;
+    height: auto;
+}
+.content{
+    margin:auto;
+    width: 60%;
+    grid-area: content;
+}
+
+.thiny{
+    font-size: 80px;
+    font-weight: 300;
+    color:hsl(0, 36%, 70%);
+}
+
+.bold{
+    font-size: 80px;
+    font-weight: 400;
+    color:#333;
+}
