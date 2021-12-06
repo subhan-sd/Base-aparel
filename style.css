@@ -60,6 +60,7 @@ body{
     grid-template-rows: 0.2fr 1fr;
     grid-template-areas: "brand jumbo"
                          "content jumbo";
+    /* grid-gap: 200px; */
 }
 
 .brand{
@@ -70,29 +71,134 @@ body{
 }
 
 .jumbo{
-    /* width: 100%;
-    height: 600px;
-    background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(images/hero-desktop.jpg); */
+    background-repeat: no-repeat;
+    background-image: url(images/hero-desktop.jpg);
     grid-area: jumbo;
     max-width: 100%;
     height: auto;
 }
 .content{
+    padding: 13% 0 20.3% 0;
     margin:auto;
     width: 60%;
     grid-area: content;
 }
 
 .thiny{
-    font-size: 80px;
+    letter-spacing: 15px;
+    font-size: 90px;
     font-weight: 300;
     color:hsl(0, 36%, 70%);
 }
 
 .bold{
-    font-size: 80px;
+    letter-spacing: 20px;
+    font-size: 90px;
     font-weight: 400;
     color:#333;
+    margin-bottom: 20px;
+}
+
+.detail{
+    letter-spacing: 1px;
+    font-size: 26px;
+    margin-bottom: 20px;
+    line-height: 1.4;
+    color:hsl(0, 43%, 75%);
+}
+
+form{
+    display: flex;
+    flex-direction: row;
+}
+
+.input{
+    font-size: 26px;
+    font-weight: 400;
+    color: hsl(0, 43%, 75%);
+    width: 80%;
+    padding:20px 30px ;
+    border-radius: 50px;
+    border: 1px solid hsl(0, 43%, 75%);
+}
+
+.button{
+    border: none;
+    margin-left: -40px;
+    /* height:px; */
+    width:20%;
+    border-radius: 50px;
+    padding: 12px 50px 12px 45px;
+    background-image: linear-gradient( 135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    box-shadow: 0 15px 34px -2px hsl(0, 51%, 83%);
+    transition: 0.3s;
+}
+
+.button:hover{
+    background-image: linear-gradient( 135deg, hsl(0, 59%, 89%), hsl(0, 80%, 86%));
+    /* transition: 2s; */
+    box-shadow: 0 15px 24px -2px hsl(0, 61%, 81%);
+}
+
+button img{
+    /* color: #33 */
+    /* margin: 93px; */
+    text-align: center;
+}
+
+@media only screen and (max-width: 400px){
+
+    .container{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 0.2fr 0.4fr 1fr;
+        grid-template-areas: "brand"
+                             "jumbo"
+                             "content";
+    }
+
+    .jumbo{
+        background-image: url(images/hero-mobile.jpg);
+    }
+
+    .brand{
+        grid-area: brand;
+        width: 80%;
+        margin: auto;
+    }
+    
+    .content{
+        /* padding: 15% 0 12.2% 0; */
+        width: 80%;
+    }
+
+
+    .thiny{
+        text-align: center;
+        letter-spacing: 15px;
+        font-size: 40px;
+        font-weight: 300;
+        color:hsl(0, 36%, 70%);
+    }
+    
+    .bold{
+        text-align: center;
+        letter-spacing: 20px;
+        font-size: 40px;
+        font-weight: 400;
+        color:#333;
+        margin-bottom: 30px;
+    }
+    
+    .detail{
+        text-align: center;
+        letter-spacing: 1px;
+        font-size: 16px;
+        margin-bottom: 40px;
+        line-height: 1.4;
+        color:hsl(0, 43%, 75%);
+    }
+
 }
