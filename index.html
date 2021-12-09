@@ -25,15 +25,55 @@
       <div class="bold">COMING SOON</div>
       <div class="detail">Hello fellow shoppers! We're currecntly buildding our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</div>
       <div class="email">
-        <form action="">
-          <input type="email" value="Email Address" class="input" id="email">
-            <button class="button">
-              <img src="images/icon-arrow.svg" alt="">
+        <form action="" name="myform" onsubmit="return validationForm()" >
+          <input type="text" placeholder="Email Address" class="input" id="email" name="email">
+          <ion-icon name="alert-circle-sharp" id="alert"></ion-icon>
+          <button type="submit" class="button" id="button">
+            <img src="images/icon-arrow.svg" alt="">
             </button>
         </form>
+        <div id="val">Please provide a valid email</div>
       </div>
     </div>
   </div>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script>
+    function validationForm(email){
+      let x = document.myform.email.value;
+      var val =  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+      if (!x.match(!val)){
+
+        // alert("Invalid Ksong");
+        // console.log('LOse');
+
+        // ------------------------
+        document.getElementById('val').style.display="block";
+        document.getElementById('alert').style.display="block";
+        document.getElementById('email').style.border="2px solid hsl(0, 79%, 68%)";
+        console.log("kosong");
+        return false;
+      }
+    }
+
+    // function ValidateEmail(input) {
+
+    // var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+    // if (input.value.match(validRegex)) {
+    //   alert("Valid email address!");
+    //   document.form1.text1.focus();
+    //   return true;
+    // } else {
+    //   alert("Invalid email address!");
+    //   document.form1.text1.focus();
+    //   return false;
+    // }
+    // }
+  </script>
 
 </body>
 </html>
